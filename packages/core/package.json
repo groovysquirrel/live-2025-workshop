@@ -11,10 +11,11 @@
     ]
   },
   "dependencies": {
-    "sst": "*"
+    "sst": "*",
+    "vite": "6.3.5"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.141",
-    "vitest": "^2.0.3"
+    "vitest": "^3.1.4"
   }
 }
