@@ -3,7 +3,7 @@
 export default $config({
   app(input) {
     return {
-      name: "notes",
+      name: "live-2025-workshop",
       removal: "remove",
       home: "aws",
     };

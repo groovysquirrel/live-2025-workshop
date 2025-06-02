@@ -11,6 +11,9 @@ export const api = new sst.aws.ApiGatewayV2("Api", {
         auth: { iam: true }
       },
     }
+  },
+  domain: {
+    name: "live.patternsatscale.com"
   }
 });
 
