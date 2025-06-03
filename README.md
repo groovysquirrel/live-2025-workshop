@@ -6,13 +6,13 @@ We create a note taking app from scratch — [**demo.sst.dev**](https://demo.sst
 
 ![Demo App](screenshot.png)
 
-We use React.js, AWS Lambda, API Gateway, DynamoDB, and Cognito. This repo is a full-stack serverless app built with SST.
+We use React.js, AWS Lambda, API Gateway, and DynamoDB. This repo is a full-stack serverless app built with SST.
 
 - The `infra/` directory defines our AWS infrastructure.
 - The `packages/functions` directory contains the Lambda functions that power the CRUD API.
 - The `packages/frontend` directory contains the React app.
 
-It's a single-page React app powered by a serverless CRUD API. We also cover how add user authentication, handle file uploads, and process credit card payments with Stripe.
+It's a single-page React app powered by a serverless CRUD API. The app allows anyone to create, read, update, and delete notes without requiring authentication.
 
 ### Prerequisites
 
@@ -35,12 +35,6 @@ Install dependencies.
 npm install
 ```
 
-This project uses a secret that we are not checking in to the repo. Make sure to [create one before deploying](https://sst.dev/chapters/handling-secrets-in-sst.html).
-
-```bash
-sst secret set StripeSecretKey <YOUR_STRIPE_SECRET_TEST_KEY>
-```
-
 #### Developing Locally
 
 From your project root run:
@@ -57,12 +51,6 @@ Run this in the project root to deploy it to prod.
 
 ```bash
 npx sst deploy --stage production
-```
-
-Make sure to set your secret for prod as well.
-
-```bash
-sst secret set StripeSecretKey <YOUR_STRIPE_SECRET_TEST_KEY> --stage production
 ```
 
 ---

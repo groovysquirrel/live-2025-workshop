@@ -13,9 +13,9 @@ export const main = Util.handler(async (event) => {
     //   partition key
     KeyConditionExpression: "userId = :userId",
     // 'ExpressionAttributeValues' defines the value in the condition
-    // - ':userId': defines 'userId' to be the id of the author
+    // - ':userId': defines 'userId' to be a fixed value since auth is removed
     ExpressionAttributeValues: {
-      ":userId": event.requestContext.authorizer?.iam.cognitoIdentity.identityId,
+      ":userId": "anonymous-user",
     },
   };
 
