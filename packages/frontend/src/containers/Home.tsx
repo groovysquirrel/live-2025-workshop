@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { API } from "aws-amplify";
 import { NoteType } from "../types/note";
 import { onError } from "../lib/errorLib";
-import { BsPencilSquare } from "react-icons/bs";
+import { BsPencilSquare, BsCamera } from "react-icons/bs";
 import ListGroup from "react-bootstrap/ListGroup";
 import { LinkContainer } from "react-router-bootstrap";
 import "./Home.css";
@@ -41,6 +41,12 @@ export default function Home() {
           <ListGroup.Item action className="py-3 text-nowrap text-truncate">
             <BsPencilSquare size={17} />
             <span className="ms-2 fw-bold">Create a new note</span>
+          </ListGroup.Item>
+        </LinkContainer>
+        <LinkContainer to="/photo-describe">
+          <ListGroup.Item action className="py-3 text-nowrap text-truncate">
+            <BsCamera size={17} />
+            <span className="ms-2 fw-bold">📸 Describe a photo with AI</span>
           </ListGroup.Item>
         </LinkContainer>
         {notes.map(({ noteId, content, createdAt }) => (

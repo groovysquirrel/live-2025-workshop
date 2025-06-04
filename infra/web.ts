@@ -16,4 +16,5 @@ export const frontend = new sst.aws.StaticSite("Frontend", {
     VITE_BUCKET: bucket.name,
     
   },
+
 });
